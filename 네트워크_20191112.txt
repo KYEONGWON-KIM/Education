@@ -1,0 +1,72 @@
+[Network]
+1. OSI 7계층
+	Application Layer
+	
+	Presentation Layer
+	
+	Session Layer
+	
+	Transprot Layer
+	
+	Network Layer
+	
+	Data-Link Layer
+		- bit로 전송 받은 데이터를 packet화한 링크로 변환
+		- 데이터 제어(흐름, 에러, 순서)를 위한 계층
+		- 전송 단위 : frame
+		- 사용 protocol : ARP(Mac address로 변환하는 장비)
+		- 2계층 장비 : bridge, switch
+		
+	Physical Layer(on-off, 0-1)
+		- 데이터를 2진수로 변경하여 전기적인 신호를 주고 받는 계층
+		- 전송단위 : bit
+		- 사용 protocol : Ethernet
+		- 1계층 장비 : repeater, hub
+		(repeater : 신호가 약해졌을 때 해당 신호의 세기를 재생 시켜 주는 장비)
+		(hub : 들어온 신호를 모든 노드에 뿌려주는 장비)
+	
+2. 현재 네트워크의 통신 방식
+	우리는 어떤 방식으로 통신 할까요?
+		우리는 Ethernet 방식을 사용한다.(눈치게임과 유사, 나 통신할래)
+			Ethernet 방식은 CSMA/CD 기술을 사용한다.
+				이때, Collision이 발생하기도 한다.
+ 
+3. Colision domain
+	(잘게 잘게 부순다.)
+
+4. broadcast domain
+	- subnet mask(=net mast)가 다른 ip끼리는 broadcast를 이용할수 없다. (통신하긴 위해선 router란 장비가 필요)(host : 네트워크 상에서 몇대의 장비와 통신할거냐)
+															  (기본게이트웨이 : 자신과 다른사람과 통신하기 위해 필요)
+	- subnetting
+		10수와 2진수의 이해가 필요
+		예) 255를 연속적으로 2로 나눈다.
+		--
+		공식 : 2의 n승 -2
+		--
+		128.110.121.32/25
+		/앞은 ip주소
+		
+		DHCP : Dynamic Host Configuration Protocol(동적 호스트 구성 프로토콜)은 호스트 IP 구성 관리를 단순화하는 IP 표준이다.
+		DNS : Domain Name Server
+		LAN : Local Area Network(근거리 통신망)
+		WAN : Wide Area Network(광역 통신망)
+					
+2의 0승 = 1
+2의 1승 = 2
+2의 2승 = 4
+2의 3승 = 8
+2의 4승 = 16
+2의 5승 = 32
+2의 6승 = 64
+2의 7승 = 128
+2의 8승 = 256
+2의 9승 = 512
+2의 10승 = 1024
+2의 11승 = 2048
+2의 12승 = 4096
+
+--
+추가 조언)
+리눅스 명령어 
+awk
+shell
